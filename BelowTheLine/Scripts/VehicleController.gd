@@ -11,7 +11,7 @@ func _ready():
 	max_contacts_reported = 2
 	body_entered.connect(_on_body_entered)
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	# Simple collision impact based on speed
 	var impact = linear_velocity.length()
 	HeatManager.on_collision(impact)

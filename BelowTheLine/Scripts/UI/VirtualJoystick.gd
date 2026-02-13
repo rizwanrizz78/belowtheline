@@ -16,7 +16,6 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			if _touch_index == -1:
-				var local_pos = event.position - global_position
 				# Check if touch is within the control rect
 				if get_global_rect().has_point(event.position):
 					_touch_index = event.index

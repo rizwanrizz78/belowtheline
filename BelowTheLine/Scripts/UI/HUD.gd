@@ -19,7 +19,7 @@ func _ready():
 	_update_heat(GameState.heat_level)
 	objective_label.text = "GOAL: Wait..."
 
-func _process(delta):
+func _process(_delta):
 	# Update speed from player
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
@@ -38,10 +38,10 @@ func _update_money(m):
 func _update_heat(h):
 	heat_label.text = "HEAT: %.1f%%" % h
 
-func _on_pickup_ready(pos):
+func _on_pickup_ready(_pos):
 	objective_label.text = "GOAL: Pickup Cargo"
 
-func _on_dropoff_ready(pos):
+func _on_dropoff_ready(_pos):
 	objective_label.text = "GOAL: Deliver Cargo"
 
 func _on_delivery_completed():

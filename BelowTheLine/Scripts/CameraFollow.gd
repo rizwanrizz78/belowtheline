@@ -35,11 +35,6 @@ func _physics_process(delta):
 		forward.y = 0 # Ignore pitch
 		forward = forward.normalized()
 
-		# Right vector
-		var right = -target_basis.x # Godot X is right? No, -X is right if -Z is forward?
-		# Basis X is Right in Godot.
-		# If forward is -Z, Right is X.
-
 		# Actually, let's just use `look_at` from a position.
 
 		# Desired position: behind and above
