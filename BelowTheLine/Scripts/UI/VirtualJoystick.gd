@@ -10,6 +10,7 @@ var _touch_index: int = -1
 func _ready():
 	# Ensure handle is centered
 	await get_tree().process_frame
+	if not is_inside_tree(): return
 	_reset_handle()
 
 func _input(event: InputEvent) -> void:

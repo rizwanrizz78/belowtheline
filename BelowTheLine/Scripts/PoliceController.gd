@@ -10,6 +10,7 @@ func _ready():
 	add_to_group("police")
 	# Wait for player to exist
 	await get_tree().process_frame
+	if not is_inside_tree(): return
 	target = get_tree().get_first_node_in_group("player")
 
 func _physics_process(delta):
