@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://city_zone"]
+
+[ext_resource type="PackedScene" uid="uid://delivery_point" path="res://Scenes/DeliveryPoint.tscn" id="1_point"]
+
+[node name="CityZone" type="Node3D"]
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(200, 1, 200)
+
+[node name="Buildings" type="Node3D" parent="."]
+
+[node name="Building1" type="CSGBox3D" parent="Buildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 20)
+use_collision = true
+size = Vector3(10, 20, 10)
+
+[node name="Building2" type="CSGBox3D" parent="Buildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 15, -20)
+use_collision = true
+size = Vector3(15, 30, 15)
+
+[node name="Building3" type="CSGBox3D" parent="Buildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 8, -40)
+use_collision = true
+size = Vector3(20, 16, 20)
+
+[node name="Building4" type="CSGBox3D" parent="Buildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 12, 30)
+use_collision = true
+size = Vector3(12, 24, 12)
+
+[node name="DeliveryPoints" type="Node3D" parent="."]
+
+[node name="Point1" parent="DeliveryPoints" instance=ExtResource("1_point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="Point2" parent="DeliveryPoints" instance=ExtResource("1_point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -30)
+
+[node name="Point3" parent="DeliveryPoints" instance=ExtResource("1_point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -10)
+
+[node name="Point4" parent="DeliveryPoints" instance=ExtResource("1_point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 40)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 20, 0)
+shadow_enabled = true
