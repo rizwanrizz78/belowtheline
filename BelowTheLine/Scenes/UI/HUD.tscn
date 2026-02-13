@@ -13,24 +13,33 @@ mouse_filter = 2
 script = ExtResource("1_hud")
 
 [node name="Stats" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 200.0
-offset_bottom = 150.0
+layout_mode = 1
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 500.0
+offset_bottom = 300.0
+mouse_filter = 2
+theme_override_constants/separation = 10
 
 [node name="Speed" type="Label" parent="Stats"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "SPEED: 0 km/h"
 
 [node name="Heat" type="Label" parent="Stats"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.4, 1)
+theme_override_font_sizes/font_size = 32
 text = "HEAT: 0%"
 
 [node name="Money" type="Label" parent="Stats"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 1, 0.4, 1)
+theme_override_font_sizes/font_size = 32
 text = "MONEY: $0"
 
 [node name="Objective" type="Label" parent="Stats"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "GOAL: ..."
