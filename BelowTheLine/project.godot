@@ -1,0 +1,34 @@
+config_version=5
+
+[application]
+
+config/name="Below The Line: Shadow Courier Empire"
+run/main_scene="res://Scenes/MainMenu.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://Scripts/Autoloads/GameState.gd"
+SaveSystem="*res://Scripts/Autoloads/SaveSystem.gd"
+MobileInput="*res://Scripts/Autoloads/MobileInput.gd"
+DeliveryManager="*res://Scripts/Autoloads/DeliveryManager.gd"
+HeatManager="*res://Scripts/Autoloads/HeatManager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+textures/vram_compression/import_etc2_astc=true
